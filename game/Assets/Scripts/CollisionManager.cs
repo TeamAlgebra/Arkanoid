@@ -40,7 +40,7 @@ public class CollisionManager : MonoBehaviour
         customCollider2Ds.Remove(customCollider2D);
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         if (customCollider2Ds == null) return;
 

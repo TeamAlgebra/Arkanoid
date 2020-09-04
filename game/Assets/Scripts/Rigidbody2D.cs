@@ -18,9 +18,9 @@ public class Rigidbody2D : MonoBehaviour
         //};
     }
 
-    private void FixedUpdate()
-    {
-        // Apply physics
-        //transform.position += velocity * 50.0f * Time.deltaTime;
-    }
+    //private void FixedUpdate()
+    //{
+    //    // Apply physics
+    //    //transform.position += velocity * 50.0f * Time.deltaTime;
+    //}
 }
