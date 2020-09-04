@@ -55,17 +55,17 @@ public class BallController : MonoBehaviour
             Debug.Log("golpea la raqueta");
 
         lastCollisionPoint = col.collisionPoint;
-        var normal = Vector2.up;
-        if (col.collider.name == "border_left")
-            normal = Vector2.right;
-        if (col.collider.name == "border_right")
-            normal = Vector2.left;
-        if (col.collider.name == "border_top")
-            normal = Vector2.down;
-        if (col.collider.name == "racket_left")
-            normal = Vector2.up;
-        if (col.collider.name == "racket_right")
-            normal = Vector2.up;
+        var normal = col.normal;
+        //if (col.collider.name == "border_left")
+        //    normal = Vector2.right;
+        //if (col.collider.name == "border_right")
+        //    normal = Vector2.left;
+        //if (col.collider.name == "border_top")
+        //    normal = Vector2.down;
+        //if (col.collider.name == "racket_left")
+        //    normal = Vector2.up;
+        //if (col.collider.name == "racket_right")
+        //    normal = Vector2.up;
 
         Bounce(normal);
 
