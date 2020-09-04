@@ -36,7 +36,7 @@ public class BallController : MonoBehaviour
         collider.onCollisionEnter2D += onCollisionEnter;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if(difficultyMultiplier < 5)
             difficultyMultiplier += Time.deltaTime / 10;
