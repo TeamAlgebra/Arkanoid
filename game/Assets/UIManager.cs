@@ -36,7 +36,7 @@ public class UIManager : MonoBehaviour
         hightScore = PlayerPrefs.GetInt("hight_score", 0);
         UpdateUI();
 
-        var gameManager = GameManager.GetInstance();
+        GameManager gameManager = GameManager.GetInstance();
 
         gameManager.OnRestartGame += onRestartGame;
         gameManager.OnScorePoints += onRestartGame;
