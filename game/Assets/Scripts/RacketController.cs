@@ -11,8 +11,8 @@ public class RacketController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        var sideColliders = GetComponentsInChildren<CustomCollider2D>();
-        foreach (var collider in sideColliders)
+        CustomCollider2D[] sideColliders = GetComponentsInChildren<CustomCollider2D>();
+        foreach (CustomCollider2D collider in sideColliders)
         {
             collider.onCollisionEnter2D += onCollisionEnter2D;
             collider.onCollisionExit2D += onCollisionExit2D;

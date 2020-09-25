@@ -71,8 +71,8 @@ public class BallController : MonoBehaviour
 
     private void Bounce(Vector3 collisionNormal)
     {
-        var speed = velocity.magnitude;
-        var direction = Vector3.Reflect(velocity.normalized, collisionNormal).normalized;
+        float speed = velocity.magnitude;
+        Vector3 direction = Vector3.Reflect(velocity.normalized, collisionNormal).normalized;
         velocity = direction * Mathf.Max(speed, 1);
     }
 

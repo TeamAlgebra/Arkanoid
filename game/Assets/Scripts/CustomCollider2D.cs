@@ -80,7 +80,7 @@ public class CustomCollider2D : MonoBehaviour
 
     public void CalculateCollisions(IEnumerable<CustomCollider2D> colliders)
     {
-        foreach (var collider in colliders)
+        foreach (CustomCollider2D collider in colliders)
         {
             if (collider == this) continue;
             switch (ColliderType)
@@ -209,8 +209,8 @@ public class CustomCollider2D : MonoBehaviour
 
     private Vector3 GetCollisionPoint(CustomCollider2D col1, CustomCollider2D col2)
     {
-        var dirVector = (col2.transform.position + col2.centerOffset) - (col1.transform.position + col1.centerOffset);
-        var closestPoint = dirVector.normalized * col1.radius;
+        Vector3 dirVector = (col2.transform.position + col2.centerOffset) - (col1.transform.position + col1.centerOffset);
+        Vector3 closestPoint = dirVector.normalized * col1.radius;
 
         return col1.transform.position + closestPoint;
     }
